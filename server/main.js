@@ -3,5 +3,4 @@ import '../collection/test';
 
 
 Meteor.startup(() => {
-	console.log("server 0n ---------------------");
 });

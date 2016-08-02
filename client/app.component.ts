@@ -8,7 +8,7 @@ import Action from './components/action/action.component';
 import { provideRouter, RouterConfig, ROUTER_DIRECTIVES} from '@angular/router';
 
 import template from './app.template.html';
-
+import 'bootstrap/dist/css/bootstrap.css';
 
 
 
@@ -34,19 +34,23 @@ class Socially {
 
 
     hello = true;
+    internetStatus = false;
 
     constructor(){
-        this.hello = navigator.onLine ;
-        let self = this;
-        window.addEventListener("offline", function(e) { self.hello =  navigator.onLine });
-        window.addEventListener("online", function(e) { self.hello =  navigator.onLine });
-
-
         Meteor.subscribe('tasks');
+    }
 
+    getInternetStatus(){
+        this.internetStatus = navigator.onLine ;
+        let self = this;
+        window.addEventListener("offline", function(e) { self.internetStatus =  navigator.onLine });
+        window.addEventListener("online", function(e) { self.internetStatus =  navigator.onLine });
 
-
-        console.log(this.hello);
+        if(this.internetStatus === true){
+            return "btn-success";
+        }else{
+            return "btn-danger";
+        }
     }
 
 

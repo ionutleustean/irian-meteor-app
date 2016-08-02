@@ -1,3 +1,16 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="pull-left">
+            <h4> Irian Meteor App </h4>
+        </div>
+
+        <div class="pull-right">
+            <button type="button" class="btn" [ngClass]="getInternetStatus()"></button>
+        </div>
+    </div>
+</nav>
+
+
 Internet connection: {{hello}}
 
 <div>
