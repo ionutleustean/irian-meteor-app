@@ -1,0 +1,24 @@
+{
+  "public": {
+
+
+  },
+
+  "electron": {
+    "name": "MyApp",
+    "autoPackage": true,
+    "version": "0.1.0",
+    "description": "A really cool app.",
+    "height": 200,
+    "width": 200,
+    "frame": true,
+    "title-bar-style": "hidden",
+    "resizable": true,
+    "protocols": [{
+      "name": "MyApp",
+      "schemes": ["myapp"]
+    }],
+
+    "appSrcDir": ""
+  }
+}
